@@ -1,0 +1,10 @@
+﻿global using System;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Collections.Generic;
+global using System.Text;
+global using Users.Persistence.Database;
+global using Framework.Infrastructure.Database;
+global using System.Threading;
+global using Users.Domain.Entities;

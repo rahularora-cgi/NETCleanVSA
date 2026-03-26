@@ -1,0 +1,48 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CRM.Web.Api/CRM.Web.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Framework/">
+    <Project Path="src/Framework/Framework.Application/Framework.Application.csproj" />
+    <Project Path="src/Framework/Framework.Domain/Framework.Domain.csproj" />
+    <Project Path="src/Framework/Framework.Infrastructure/Framework.Infrastructure.csproj" />
+    <Project Path="src/Framework/Framework.Web.Infrastructure/Framework.Infrastructure.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Accounts/">
+    <Project Path="src/Modules/Accounts/Accounts.Application/Accounts.Application.csproj" />
+    <Project Path="src/Modules/Accounts/Accounts.Domain/Accounts.Domain.csproj" />
+    <Project Path="src/Modules/Accounts/Accounts.Endpoint/Accounts.Endpoint.csproj" />
+    <Project Path="src/Modules/Accounts/Accounts.Persistence/Accounts.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Contacts/">
+    <Project Path="src/Modules/Contacts/Contacts.Application/Contacts.Application.csproj" />
+    <Project Path="src/Modules/Contacts/Contacts.Domain/Contacts.Domain.csproj" />
+    <Project Path="src/Modules/Contacts/Contacts.Endpoint/Contacts.Endpoint.csproj" />
+    <Project Path="src/Modules/Contacts/Contacts.Persistence/Contacts.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Leads/">
+    <Project Path="src/Modules/Leads/Leads.Application/Leads.Application.csproj" />
+    <Project Path="src/Modules/Leads/Leads.Domain/Leads.Domain.csproj" />
+    <Project Path="src/Modules/Leads/Leads.Endpoint/Leads.Endpoint.csproj" />
+    <Project Path="src/Modules/Leads/Leads.Persistence/Leads.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Opportunities/">
+    <Project Path="src/Modules/Opportunities/Opportunities.Application/Opportunities.Application.csproj" />
+    <Project Path="src/Modules/Opportunities/Opportunities.Domain/Opportunities.Domain.csproj" />
+    <Project Path="src/Modules/Opportunities/Opportunities.Endpoint/Opportunities.Endpoint.csproj" />
+    <Project Path="src/Modules/Opportunities/Opportunities.Persistence/Opportunities.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Users/">
+    <Project Path="src/Modules/Users/Users.Application/Users.Application.csproj" />
+    <Project Path="src/Modules/Users/Users.Domain/Users.Domain.csproj" />
+    <Project Path="src/Modules/Users/Users.Endpoint/Users.Endpoint.csproj" />
+    <Project Path="src/Modules/Users/Users.Infrastructure/Users.Infrastructure.csproj" />
+    <Project Path="src/Modules/Users/Users.Persistence/Users.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/Orchestration/">
+    <Project Path="src/Orchestration/NETCleanVSA.AppHost/NETCleanVSA.AppHost.csproj" />
+    <Project Path="src/Orchestration/NETCleanVSA.ServiceDefaults/NETCleanVSA.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>

@@ -1,0 +1,17 @@
+﻿global using System;
+global using Accounts.Application.Features.CreateAccount;
+global using Accounts.Application.Features.DeleteAccount;
+global using Accounts.Application.Features.GetAccountById;
+global using Accounts.Application.Features.GetAllAccounts;
+global using Accounts.Application.Features.UpdateAccount;
+global using Framework.Application;
+global using Framework.Infrastructure.Web;
+global using Framework.Infrastructure.Web.Filters;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore.Metadata.Internal;
+global using System.Threading.Tasks;
+global using Accounts.Application;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;

@@ -1,0 +1,12 @@
+﻿global using System;
+global using System.Runtime;
+global using System.Text.Json;
+global using System.Collections.Generic;
+global using System.Text;
+global using Framework.Domain;
+global using Framework.Infrastructure.Outbox;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Options;
+global using RabbitMQ.Client;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;

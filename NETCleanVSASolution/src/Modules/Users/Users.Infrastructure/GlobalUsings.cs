@@ -1,0 +1,17 @@
+﻿global using System;
+global using System.Text;
+global using System.Collections.Generic;
+global using System.Collections.ObjectModel;
+global using System.Data;
+global using System.Security.Claims;
+global using System.Security.Cryptography;
+global using System.Threading.Tasks;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.Extensions.Options;
+global using Microsoft.IdentityModel.JsonWebTokens;
+global using Microsoft.IdentityModel.Tokens;
+global using Users.Domain.Entities;
+global using Users.Infrastructure.Authentication.JWT;

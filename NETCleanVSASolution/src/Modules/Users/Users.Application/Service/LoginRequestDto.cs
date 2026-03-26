@@ -1,0 +1,8 @@
+﻿namespace Users.Application.Service
+{
+    public record LoginRequestDto
+    {
+        public string Email { get; init; }
+        public string Password { get; init; }
+    }
+}

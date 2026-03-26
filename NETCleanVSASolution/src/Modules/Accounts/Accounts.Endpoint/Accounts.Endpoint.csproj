@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Accounts.Domain\Accounts.Domain.csproj" />
+    <ProjectReference Include="..\Accounts.Application\Accounts.Application.csproj" />
+  </ItemGroup>
+
+</Project>

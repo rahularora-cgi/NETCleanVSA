@@ -1,0 +1,16 @@
+﻿global using System;
+global using System.Data;
+global using Framework.Infrastructure.Web;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Users.Application.Service;
+global using Framework.Application;
+global using Framework.Domain;
+global using Users.Application;
+global using Users.Application.CreateUser;
+global using Users.Application.DeleteUser;
+global using Users.Application.QueryRole;
+global using Users.Application.QueryUser;
+global using Users.Application.UpdateUser;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
