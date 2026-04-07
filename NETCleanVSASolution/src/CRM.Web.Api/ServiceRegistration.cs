@@ -5,6 +5,7 @@ using System.Text;
 using Users.Presentation;
 using Accounts.Presentation;
 using Framework.Infrastructure.Web;
+using Framework.Infrastructure.Notifications;
 
 namespace CRM.Web.Api
 {
@@ -12,6 +13,8 @@ namespace CRM.Web.Api
     {
         public static IServiceCollection AddCRMApiServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddNotificationServices(configuration);
+
             //Register Framework Infrastructure
             services.AddFrameworkWebInfrastructure(configuration);
 

@@ -3,6 +3,8 @@ global using Framework.Application;
 global using Framework.Domain;
 global using Microsoft.AspNetCore.Identity;
 global using Microsoft.EntityFrameworkCore;
+global using Users.Application.Events;
+global using Users.Domain.Events;
 global using Microsoft.Extensions.Logging;
 global using Users.Domain.Entities;
 global using Users.Persistence.Database;

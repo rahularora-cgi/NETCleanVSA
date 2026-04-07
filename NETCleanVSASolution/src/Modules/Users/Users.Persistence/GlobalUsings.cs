@@ -6,5 +6,6 @@ global using System.Collections.Generic;
 global using System.Text;
 global using Users.Persistence.Database;
 global using Framework.Infrastructure.Database;
+global using Framework.Domain;
 global using System.Threading;
 global using Users.Domain.Entities;

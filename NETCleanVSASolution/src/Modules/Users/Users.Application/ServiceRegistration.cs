@@ -25,9 +25,14 @@
             //Register Services
             services.AddScoped<ILoginService, LoginService>();
 
+            // Register Event Consumers (for Outbox pattern processing)
+            services.AddScoped<UserCreatedEventConsumer>();
+
             // Register validators
             services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
 
+            //Register Domain Event Handlers (for in-memory event processing)
+            services.AddScoped<IDomainEventHandler<UserCreatedDomainEvent>, UserCreatedDomainEventHandler>();
 
             return services;
 
