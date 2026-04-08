@@ -7,5 +7,6 @@ global using System.Text;
 global using Users.Persistence.Database;
 global using Framework.Infrastructure.Database;
 global using Framework.Domain;
+global using Framework.Application;
 global using System.Threading;
 global using Users.Domain.Entities;

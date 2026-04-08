@@ -4,6 +4,7 @@ global using System.Text.Json;
 global using System.Collections.Generic;
 global using System.Text;
 global using Framework.Domain;
+global using Framework.Application;
 global using Framework.Infrastructure.Outbox;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Options;
