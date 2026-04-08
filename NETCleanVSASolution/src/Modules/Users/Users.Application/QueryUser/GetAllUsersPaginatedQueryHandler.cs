@@ -1,6 +1,6 @@
 ﻿namespace Users.Application.QueryUser
 {
-    public class GetAllUsersPaginatedQueryHandler(UsersDbContext _dbContext, ILogger<GetAllUsersPaginatedQueryHandler> _logger)
+    public class GetAllUsersPaginatedQueryHandler(IUsersDbContext _dbContext, ILogger<GetAllUsersPaginatedQueryHandler> _logger)
         : IQueryHandler<GetAllUsersPaginatedQuery, PagedResult<GetUserDto>>
     {
         public async Task<Result<PagedResult<GetUserDto>>> HandleAsync(GetAllUsersPaginatedQuery query, CancellationToken cancellationToken = default)

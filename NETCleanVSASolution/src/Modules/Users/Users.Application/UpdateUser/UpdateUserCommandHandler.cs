@@ -1,6 +1,6 @@
 namespace Users.Application.UpdateUser
 {
-    public class UpdateUserCommandHandler(UsersDbContext _dbContext, ILogger<UpdateUserCommandHandler> _logger)
+    public class UpdateUserCommandHandler(IUsersDbContext _dbContext, ILogger<UpdateUserCommandHandler> _logger)
         : ICommandHandler<UpdateUserCommand, Unit>
     {
         public async Task<Result<Unit>> HandleAsync(UpdateUserCommand command, CancellationToken cancellationToken = default)

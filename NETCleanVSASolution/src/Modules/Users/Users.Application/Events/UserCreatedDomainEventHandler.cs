@@ -1,5 +1,4 @@
 using Framework.Application;
-using Framework.Infrastructure.Notifications;
 using Microsoft.Extensions.Logging;
 using Users.Domain.Events;
 

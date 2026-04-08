@@ -7,9 +7,6 @@
             //Register Framework Application Services
             services.AddFrameworkApplication();
 
-            services.AddUsersInfrastructure(configuration);
-            services.AddUserDatabase(configuration);
-
             //Register Query Handlers
             services.AddScoped<IQueryHandler<GetRolesByUserIdQuery, IEnumerable<GetRoleDto>>, GetRolesByUserIdQueryHandler>();
             services.AddScoped<IQueryHandler<GetUserByEmailQuery, GetUserDto>, GetUserByEmailQueryHandler>();

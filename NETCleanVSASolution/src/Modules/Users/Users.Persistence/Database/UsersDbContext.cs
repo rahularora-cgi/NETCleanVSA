@@ -1,6 +1,8 @@
-﻿namespace Users.Persistence.Database
+﻿using Users.Application;
+
+namespace Users.Persistence.Database
 {
-    public class UsersDbContext(DbContextOptions<UsersDbContext> options, IDomainEventDispatcher domainEventDispatcher): DbContextBase(options, domainEventDispatcher)
+    public class UsersDbContext(DbContextOptions<UsersDbContext> options, IDomainEventDispatcher domainEventDispatcher) : DbContextBase(options, domainEventDispatcher), IUsersDbContext
     {
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Role> Roles { get; set; }

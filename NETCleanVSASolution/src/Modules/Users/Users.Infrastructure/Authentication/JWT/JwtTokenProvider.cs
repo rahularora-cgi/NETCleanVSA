@@ -1,12 +1,5 @@
-﻿
-
-namespace Users.Infrastructure.Authentication.JWT
+﻿namespace Users.Infrastructure.Authentication.JWT
 {
-    public interface IJwtTokenProvider
-    {
-        Task<string> GenerateJwtToken<T>(User user, Func<User, Task<T>> GetRoles);
-    }
-
     public class JwtTokenProvider(IOptions<JwtAuthSettings> _jwtAuthSettingsOptions) : IJwtTokenProvider
     {
         private  JwtAuthSettings _jwtAuthSettings => _jwtAuthSettingsOptions.Value;

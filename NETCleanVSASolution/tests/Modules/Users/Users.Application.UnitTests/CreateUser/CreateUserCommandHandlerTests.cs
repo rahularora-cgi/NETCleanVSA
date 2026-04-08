@@ -4,7 +4,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-
 using Framework.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
@@ -12,7 +11,6 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using Users.Application.CreateUser;
 using Users.Domain.Entities;
-using Users.Persistence.Database;
 using Xunit;
 
 namespace Users.Application.CreateUser.UnitTests
@@ -31,7 +29,7 @@ namespace Users.Application.CreateUser.UnitTests
         {
             // Arrange
             var options = new DbContextOptionsBuilder<UsersDbContext>().Options;
-            var mockDbContext = new Mock<UsersDbContext>(options);
+            var mockDbContext = new Mock<IUsersDbContext>();
             var mockLogger = new Mock<ILogger<CreateUserCommandHandler>>();
             var mockDbSet = new Mock<DbSet<User>>();
 

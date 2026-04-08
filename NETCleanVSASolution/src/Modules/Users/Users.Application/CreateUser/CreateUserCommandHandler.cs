@@ -1,6 +1,6 @@
 namespace Users.Application.CreateUser
 {
-    public class CreateUserCommandHandler(UsersDbContext _dbContext, ILogger<CreateUserCommandHandler> _logger)
+    public class CreateUserCommandHandler(IUsersDbContext _dbContext, ILogger<CreateUserCommandHandler> _logger)
         : ICommandHandler<CreateUserCommand, Guid>
     {
         public async Task<Result<Guid>> HandleAsync(CreateUserCommand command, CancellationToken cancellationToken = default)

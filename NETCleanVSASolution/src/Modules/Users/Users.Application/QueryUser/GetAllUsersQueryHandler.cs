@@ -1,6 +1,6 @@
 namespace Users.Application.QueryUser
 {
-    public class GetAllUsersQueryHandler(UsersDbContext _dbContext, ILogger<GetAllUsersQueryHandler> _logger)
+    public class GetAllUsersQueryHandler(IUsersDbContext _dbContext, ILogger<GetAllUsersQueryHandler> _logger)
         : IQueryHandler<GetAllUsersQuery, IEnumerable<GetUserDto>>
     {
         public async Task<Result<IEnumerable<GetUserDto>>> HandleAsync(GetAllUsersQuery query, CancellationToken cancellationToken = default)

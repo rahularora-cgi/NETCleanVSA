@@ -1,4 +1,3 @@
-using Framework.Infrastructure.Notifications;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using Users.Domain.Events;
