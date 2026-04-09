@@ -1,6 +1,6 @@
 ﻿namespace Framework.Infrastructure.Web
 {
-    public static class ServiceRegistrationFrameworkInfrastructureWebExtensions
+    public static class FrameworkInfrastructureWebExtensions
     {
         public static IServiceCollection AddFrameworkWebInfrastructure(this IServiceCollection services, IConfiguration configuration, params string[] sourceServices)
         {

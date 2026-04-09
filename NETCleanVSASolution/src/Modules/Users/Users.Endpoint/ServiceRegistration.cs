@@ -4,7 +4,7 @@ using Users.Persistence;
 
 namespace Users.Endpoint
 {
-    public static class ServiceRegistrationUsersEndpointExtensions
+    public static class UsersEndpointExtensions
     {
         public static IServiceCollection AddUsersEndpoint(this IServiceCollection services, IConfiguration configuration)
         {

@@ -3,7 +3,7 @@ using Framework.Application.Abstractions.Events;
 
 namespace Framework.Application
 {
-    public static class ServiceRegistrationFrameworkApplicationExtensions
+    public static class FrameworkApplicationExtensions
     {
         public static IServiceCollection AddFrameworkApplication(this IServiceCollection services)
         {

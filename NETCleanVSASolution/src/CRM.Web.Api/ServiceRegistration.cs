@@ -11,7 +11,7 @@ using Framework.Infrastructure.Notifications;
 
 namespace CRM.Web.Api
 {
-    public static class ServiceRegistrationCRMWebApiExtensions
+    public static class  CRMWebApiExtensions
     {
         public static IServiceCollection AddCRMApiServices(this IServiceCollection services, IConfiguration configuration)
         {

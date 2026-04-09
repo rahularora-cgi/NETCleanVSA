@@ -2,7 +2,7 @@
 
 namespace Accounts.Endpoint
 {
-    public static class ServiceRegistrationAccountsEndpointExtensions
+    public static class AccountsEndpointExtensions
     {
         public static IServiceCollection AddAccountsEndpoint(this IServiceCollection services, IConfiguration configuration)
         {

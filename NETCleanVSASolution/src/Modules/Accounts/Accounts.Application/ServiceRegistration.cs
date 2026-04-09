@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Accounts.Application
 {
-    public static class ServiceRegistrationAccountsApplicationExtensions
+    public static class AccountsApplicationExtensions
     {
         public static IServiceCollection AddAccountsApplication(this IServiceCollection services, IConfiguration configuration)
         {

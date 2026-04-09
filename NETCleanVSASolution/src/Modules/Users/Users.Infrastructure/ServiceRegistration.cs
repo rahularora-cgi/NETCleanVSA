@@ -2,7 +2,7 @@
 
 namespace Users.Infrastructure
 {
-    public static class ServiceRegistrationUsersUsersInfrastructureExtensions
+    public static class UsersUsersInfrastructureExtensions
     {
         public static IServiceCollection AddUsersInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
