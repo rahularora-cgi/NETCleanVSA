@@ -7,8 +7,6 @@ namespace Accounts.Application
     {
         public static IServiceCollection AddAccountsApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            //Register Framework Application Services
-            services.AddFrameworkApplication();
 
             //Register Command Handlers
             services.AddScoped<ICommandHandler<CreateAccountCommand, int>, CreateAccountCommandHandler>();

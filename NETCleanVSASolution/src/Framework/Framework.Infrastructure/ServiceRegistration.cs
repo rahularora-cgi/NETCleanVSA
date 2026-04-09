@@ -4,7 +4,7 @@ using Framework.Infrastructure.CQRS;
 
 namespace Framework.Infrastructure
 {
-    public static class ServiceRegistration
+    public static class ServiceRegistrationFrameworkInfrastructureExtensions
     {
         public static IServiceCollection AddFrameworkInfrastructure(this IServiceCollection services)
         {

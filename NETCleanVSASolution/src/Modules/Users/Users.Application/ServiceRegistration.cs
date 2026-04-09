@@ -7,8 +7,6 @@ namespace Users.Application
     {
         public static IServiceCollection AddUsersApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            //Register Framework Application Services
-            services.AddFrameworkApplication();
 
             //Register Query Handlers
             services.AddScoped<IQueryHandler<GetRolesByUserIdQuery, IEnumerable<GetRoleDto>>, GetRolesByUserIdQueryHandler>();
