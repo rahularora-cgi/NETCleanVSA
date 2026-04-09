@@ -1,4 +1,6 @@
-﻿namespace Framework.Infrastructure.Notifications
+﻿using Framework.Application.Abstractions.Notification;
+
+namespace Framework.Infrastructure.Notifications
 {
     public static class NotificationExtensions
     {

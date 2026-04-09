@@ -1,4 +1,6 @@
-﻿namespace Users.Application.QueryUser
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.QueryUser
 {
     public class GetAllUsersPaginatedQueryHandler(IUsersDbContext _dbContext, ILogger<GetAllUsersPaginatedQueryHandler> _logger)
         : IQueryHandler<GetAllUsersPaginatedQuery, PagedResult<GetUserDto>>

@@ -1,4 +1,4 @@
-namespace Framework.Application
+namespace Framework.Application.Abstractions.Events
 {
     /// <summary>
     /// Dispatcher for publishing domain events to registered handlers.

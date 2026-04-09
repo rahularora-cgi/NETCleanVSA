@@ -1,4 +1,4 @@
-namespace Framework.Application
+namespace Framework.Application.Abstractions.Events
 {
     /// <summary>
     /// Handler interface for domain events.

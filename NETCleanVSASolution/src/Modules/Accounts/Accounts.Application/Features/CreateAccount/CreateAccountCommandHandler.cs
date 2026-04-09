@@ -1,6 +1,8 @@
-﻿namespace Accounts.Application.Features.CreateAccount
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Accounts.Application.Features.CreateAccount
 {
-    public class CreateAccountCommandHandler(AccountsDbContext _dbContext, ILogger<CreateAccountCommandHandler> _logger) : ICommandHandler<CreateAccountCommand, int>
+    public class CreateAccountCommandHandler(IAccountsDbContext _dbContext, ILogger<CreateAccountCommandHandler> _logger) : ICommandHandler<CreateAccountCommand, int>
     {
         public async Task<Result<int>> HandleAsync(CreateAccountCommand command, CancellationToken cancellationToken = default)
         {

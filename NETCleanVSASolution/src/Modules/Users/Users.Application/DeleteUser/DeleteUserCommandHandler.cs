@@ -1,3 +1,5 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.DeleteUser
 {
     public class DeleteUserCommandHandler(IUsersDbContext _dbContext, ILogger<DeleteUserCommandHandler> _logger)

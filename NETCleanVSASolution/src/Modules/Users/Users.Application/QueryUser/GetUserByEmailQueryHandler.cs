@@ -1,4 +1,6 @@
-﻿namespace Users.Application.QueryUser
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.QueryUser
 {
     public class GetUserByEmailQueryHandler(IUsersDbContext _dbContext, ILogger<GetUserByEmailQueryHandler> _logger) : IQueryHandler<GetUserByEmailQuery, GetUserDto>
     {

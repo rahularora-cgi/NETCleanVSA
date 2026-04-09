@@ -1,3 +1,5 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.CreateUser
 {
     public class CreateUserCommandHandler(IUsersDbContext _dbContext, ILogger<CreateUserCommandHandler> _logger)

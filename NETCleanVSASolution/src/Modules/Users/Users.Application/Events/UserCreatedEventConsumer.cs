@@ -1,3 +1,4 @@
+using Framework.Application.Abstractions.Notification;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using Users.Domain.Events;

@@ -1,6 +1,9 @@
-﻿namespace Accounts.Persistence.Database
+﻿using Accounts.Application;
+using Framework.Application.Abstractions.Events;
+
+namespace Accounts.Persistence.Database
 {
-    public class AccountsDbContext(DbContextOptions<AccountsDbContext> options): DbContextBase(options)
+    public class AccountsDbContext(DbContextOptions<AccountsDbContext> options, IDomainEventDispatcher domainEventDispatcher) : DbContextBase(options, domainEventDispatcher), IAccountsDbContext
     {
         public DbSet<Account> Accounts { get; set; }
 

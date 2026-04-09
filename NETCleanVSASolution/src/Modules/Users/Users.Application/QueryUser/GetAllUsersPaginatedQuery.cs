@@ -1,4 +1,6 @@
-﻿namespace Users.Application.QueryUser
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.QueryUser
 {
     public record GetAllUsersPaginatedQuery(
         int PageNumber = 1,

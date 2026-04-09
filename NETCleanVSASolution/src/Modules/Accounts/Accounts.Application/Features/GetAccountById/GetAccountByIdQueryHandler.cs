@@ -1,6 +1,8 @@
-﻿namespace Accounts.Application.Features.GetAccountById
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Accounts.Application.Features.GetAccountById
 {
-    public class GetAccountByIdQueryHandler(AccountsDbContext _dbContext, ILogger<GetAccountByIdQueryHandler> _logger) : IQueryHandler<GetAccountByIdQuery, GetAccountDto>
+    public class GetAccountByIdQueryHandler(IAccountsDbContext _dbContext, ILogger<GetAccountByIdQueryHandler> _logger) : IQueryHandler<GetAccountByIdQuery, GetAccountDto>
     {
         public async Task<Result<GetAccountDto>> HandleAsync(GetAccountByIdQuery query, CancellationToken cancellationToken)
         {

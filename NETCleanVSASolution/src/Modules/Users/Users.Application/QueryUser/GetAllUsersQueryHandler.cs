@@ -1,3 +1,5 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.QueryUser
 {
     public class GetAllUsersQueryHandler(IUsersDbContext _dbContext, ILogger<GetAllUsersQueryHandler> _logger)

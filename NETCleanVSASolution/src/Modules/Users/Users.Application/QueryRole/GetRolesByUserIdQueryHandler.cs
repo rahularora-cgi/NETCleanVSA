@@ -1,4 +1,6 @@
-﻿namespace Users.Application.QueryRole
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.QueryRole
 {
     public class GetRolesByUserIdQueryHandler(IUsersDbContext _dbContext, ILogger<GetRolesByUserIdQueryHandler> _logger)
         : IQueryHandler<GetRolesByUserIdQuery, IEnumerable<GetRoleDto>>

@@ -1,4 +1,4 @@
-﻿namespace Framework.Application
+﻿namespace Framework.Application.Abstractions.Notification
 {
     public interface INotificationService<TMessage> where TMessage : INotificationMessage
     {

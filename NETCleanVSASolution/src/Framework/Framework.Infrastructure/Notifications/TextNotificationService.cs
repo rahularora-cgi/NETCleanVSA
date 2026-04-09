@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Framework.Application.Abstractions.Notification;
+using Microsoft.Extensions.Logging;
 
 namespace Framework.Infrastructure.Notifications
 {

@@ -1,3 +1,5 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Accounts.Application.Features.UpdateAccount
 {
     public record UpdateAccountCommand(

@@ -2,10 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Accounts.Presentation;
 using Framework.Infrastructure.Web;
 using Framework.Infrastructure.Notifications;
 using Users.Endpoint;
+using Accounts.Endpoint;
 
 namespace CRM.Web.Api
 {
@@ -20,7 +20,7 @@ namespace CRM.Web.Api
 
             //Register Account Application Services
             services.AddUsersEndpoint(configuration);
-            services.AddAccountsPresentation(configuration);
+            services.AddAccountsEndpoint(configuration);
             return services;
         }
     }

@@ -1,3 +1,5 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.UpdateUser
 {
     public record UpdateUserCommand(

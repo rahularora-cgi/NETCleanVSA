@@ -1,4 +1,4 @@
-﻿namespace Framework.Application
+﻿namespace Framework.Application.Abstractions.CQRS
 {
     public interface IQueryDispatcher
     {

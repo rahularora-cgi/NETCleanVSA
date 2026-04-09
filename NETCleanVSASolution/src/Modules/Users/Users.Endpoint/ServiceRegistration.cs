@@ -1,4 +1,5 @@
-﻿using Users.Infrastructure;
+﻿using Framework.Infrastructure;
+using Users.Infrastructure;
 using Users.Persistence;
 
 namespace Users.Endpoint
@@ -7,6 +8,8 @@ namespace Users.Endpoint
     {
         public static IServiceCollection AddUsersEndpoint(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddFrameworkApplication();
+            services.AddFrameworkInfrastructure();
             services.AddUsersApplication(configuration);
             services.AddUsersInfrastructure(configuration);
             services.AddUsersDatabase(configuration);

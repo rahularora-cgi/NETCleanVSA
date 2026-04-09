@@ -1,4 +1,5 @@
-﻿using Users.Application;
+﻿using Framework.Application.Abstractions.Events;
+using Users.Application;
 
 namespace Users.Persistence.Database
 {

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Framework.Application.Abstractions.Events;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Framework.Application.Abstractions.Database;
 
 namespace Framework.Infrastructure.Database
 {

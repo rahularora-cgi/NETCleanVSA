@@ -1,6 +1,9 @@
-﻿namespace Users.Application
+﻿using Framework.Application.Abstractions.CQRS;
+using Framework.Application.Abstractions.Events;
+
+namespace Users.Application
 {
-    public static class ServiceRegistrationUsersApplication
+    public static class ServiceRegistrationUsersApplicationExtensions
     {
         public static IServiceCollection AddUsersApplication(this IServiceCollection services, IConfiguration configuration)
         {

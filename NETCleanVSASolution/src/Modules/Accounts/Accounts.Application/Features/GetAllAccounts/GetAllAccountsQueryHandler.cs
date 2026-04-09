@@ -1,7 +1,9 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Accounts.Application.Features.GetAllAccounts
 {
     public class GetAllAccountsQueryHandler(
-        AccountsDbContext _dbContext,
+        IAccountsDbContext _dbContext,
         ILogger<GetAllAccountsQueryHandler> _logger)
         : IQueryHandler<GetAllAccountsQuery, GetAccountListDto>
     {

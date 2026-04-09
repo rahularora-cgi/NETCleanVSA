@@ -1,4 +1,5 @@
-using Framework.Application;
+using Framework.Application.Abstractions.Events;
+using Framework.Application.Abstractions.Notification;
 using Microsoft.Extensions.Logging;
 using Users.Domain.Events;
 

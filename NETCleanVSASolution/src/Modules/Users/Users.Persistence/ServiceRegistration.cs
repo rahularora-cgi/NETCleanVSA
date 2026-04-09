@@ -1,6 +1,6 @@
 ﻿namespace Users.Persistence
 {
-    public static class ServiceRegistration
+    public static class ServiceRegistrationUsersPersistenceExtensions
     {
         public static IServiceCollection AddUsersDatabase(this IServiceCollection services, IConfiguration configuration)
         {

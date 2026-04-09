@@ -1,4 +1,6 @@
-﻿namespace Framework.Application
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Framework.Infrastructure.CQRS
 {
     public class QueryDispatcher : IQueryDispatcher
     {

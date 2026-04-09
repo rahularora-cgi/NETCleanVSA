@@ -1,6 +1,7 @@
+using Framework.Application.Abstractions.Events;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Framework.Application
+namespace Framework.Infrastructure.CQRS
 {
     /// <summary>
     /// Dispatcher implementation for publishing domain events to registered handlers.

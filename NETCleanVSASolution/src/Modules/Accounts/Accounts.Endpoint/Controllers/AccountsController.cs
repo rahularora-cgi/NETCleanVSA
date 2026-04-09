@@ -1,7 +1,6 @@
-﻿
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using Framework.Application.Abstractions.CQRS;
 
-namespace Accounts.Presentation.Controllers
+namespace Accounts.Endpoint.Controllers
 {
     //[Authorize]
     [Route("api/[controller]")]

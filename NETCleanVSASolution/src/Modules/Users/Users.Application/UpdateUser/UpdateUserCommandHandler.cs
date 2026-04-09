@@ -1,3 +1,5 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.UpdateUser
 {
     public class UpdateUserCommandHandler(IUsersDbContext _dbContext, ILogger<UpdateUserCommandHandler> _logger)
