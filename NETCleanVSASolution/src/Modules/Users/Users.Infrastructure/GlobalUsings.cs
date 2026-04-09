@@ -15,3 +15,4 @@ global using Microsoft.IdentityModel.JsonWebTokens;
 global using Microsoft.IdentityModel.Tokens;
 global using Users.Domain.Entities;
 global using Users.Infrastructure.Authentication.JWT;
+global using Users.Application;

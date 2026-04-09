@@ -3,13 +3,13 @@
   <ItemGroup>
     <PackageReference Include="FluentValidation" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
   </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\..\..\Framework\Framework.Application\Framework.Application.csproj" />
     <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
-    <ProjectReference Include="..\Users.Infrastructure\Users.Infrastructure.csproj" />
-    <ProjectReference Include="..\Users.Persistence\Users.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

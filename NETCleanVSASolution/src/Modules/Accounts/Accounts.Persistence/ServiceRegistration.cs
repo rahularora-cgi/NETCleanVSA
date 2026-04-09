@@ -1,6 +1,8 @@
-﻿namespace Accounts.Persistence
+﻿using Accounts.Application;
+
+namespace Accounts.Persistence
 {
-    public static class ServiceRegistration
+    public static class ServiceRegistrationAccountsPersistenceExtensions
     {
         public static IServiceCollection AddAccountsDatabase(this IServiceCollection services, IConfiguration configuration)
         {
@@ -8,6 +10,8 @@
             {
                 options.UseSqlServer(configuration.GetConnectionString(AccountsDbSettings.ConnectionStringKey));
             });
+
+            services.AddScoped<IAccountsDbContext>(sp => sp.GetRequiredService<AccountsDbContext>());
 
             return services;
         }

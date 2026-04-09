@@ -1,4 +1,6 @@
-﻿namespace Users.Presentation.Controllers
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Endpoint.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

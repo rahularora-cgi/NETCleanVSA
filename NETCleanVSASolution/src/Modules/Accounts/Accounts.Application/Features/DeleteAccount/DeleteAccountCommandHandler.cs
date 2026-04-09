@@ -1,6 +1,8 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Accounts.Application.Features.DeleteAccount
 {
-    public class DeleteAccountCommandHandler(AccountsDbContext _dbContext, ILogger<DeleteAccountCommandHandler> _logger)
+    public class DeleteAccountCommandHandler(IAccountsDbContext _dbContext, ILogger<DeleteAccountCommandHandler> _logger)
         : ICommandHandler<DeleteAccountCommand, Unit>
     {
         public async Task<Result<Unit>> HandleAsync(DeleteAccountCommand command, CancellationToken cancellationToken = default)

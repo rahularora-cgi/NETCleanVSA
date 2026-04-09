@@ -8,6 +8,8 @@
     <ProjectReference Include="..\..\..\Framework\Framework.Web.Infrastructure\Framework.Infrastructure.Web.csproj" />
     <ProjectReference Include="..\Users.Application\Users.Application.csproj" />
     <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
+    <ProjectReference Include="..\Users.Infrastructure\Users.Infrastructure.csproj" />
+    <ProjectReference Include="..\Users.Persistence\Users.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

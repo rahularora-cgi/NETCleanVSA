@@ -1,6 +1,8 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.DeleteUser
 {
-    public class DeleteUserCommandHandler(UsersDbContext _dbContext, ILogger<DeleteUserCommandHandler> _logger)
+    public class DeleteUserCommandHandler(IUsersDbContext _dbContext, ILogger<DeleteUserCommandHandler> _logger)
         : ICommandHandler<DeleteUserCommand, Unit>
     {
         public async Task<Result<Unit>> HandleAsync(DeleteUserCommand command, CancellationToken cancellationToken = default)

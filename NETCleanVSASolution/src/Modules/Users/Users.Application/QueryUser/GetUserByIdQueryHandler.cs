@@ -1,6 +1,8 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.QueryUser
 {
-    public class GetUserByIdQueryHandler(UsersDbContext _dbContext, ILogger<GetUserByIdQueryHandler> _logger) 
+    public class GetUserByIdQueryHandler(IUsersDbContext _dbContext, ILogger<GetUserByIdQueryHandler> _logger) 
         : IQueryHandler<GetUserByIdQuery, GetUserDto>
     {
         public async Task<Result<GetUserDto>> HandleAsync(GetUserByIdQuery query, CancellationToken cancellationToken)

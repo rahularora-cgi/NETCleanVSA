@@ -1,6 +1,8 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Users.Application.CreateUser
 {
-    public class CreateUserCommandHandler(UsersDbContext _dbContext, ILogger<CreateUserCommandHandler> _logger) 
+    public class CreateUserCommandHandler(IUsersDbContext _dbContext, ILogger<CreateUserCommandHandler> _logger)
         : ICommandHandler<CreateUserCommand, Guid>
     {
         public async Task<Result<Guid>> HandleAsync(CreateUserCommand command, CancellationToken cancellationToken = default)
@@ -19,21 +21,20 @@ namespace Users.Application.CreateUser
                         Error.Conflict($"User with email '{command.Email}' already exists"));
                 }
 
-                // Hash the password
-                var user = new User
-                {
-                    //Id = Guid.NewGuid(), db generates it
-                    FirstName = command.FirstName,
-                    LastName = command.LastName,
-                    UserName = command.UserName,
-                    IsActive = true,
-                    Email = command.Email
-                };
-
                 var passwordHasher = new PasswordHasher<User>();
+
+                var user = User.Create(
+                    userName: command.UserName,
+                    email: command.Email,
+                    passwordHash: null,
+                    firstName: command.FirstName,
+                    lastName: command.LastName
+                    );
+
                 user.PasswordHash = passwordHasher.HashPassword(user, command.Password);
 
                 _dbContext.Users.Add(user);
+
                 await _dbContext.SaveChangesAsync(cancellationToken);
 
                 _logger.LogInformation("User created successfully with ID: {UserId}", user.Id);

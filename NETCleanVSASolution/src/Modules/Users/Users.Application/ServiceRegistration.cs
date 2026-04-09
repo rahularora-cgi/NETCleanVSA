@@ -1,14 +1,14 @@
-﻿namespace Users.Application
+﻿using Framework.Application.Abstractions.CQRS;
+using Framework.Application.Abstractions.Events;
+
+namespace Users.Application
 {
-    public static class ServiceRegistrationUsersApplication
+    public static class ServiceRegistrationUsersApplicationExtensions
     {
         public static IServiceCollection AddUsersApplication(this IServiceCollection services, IConfiguration configuration)
         {
             //Register Framework Application Services
             services.AddFrameworkApplication();
-
-            services.AddUsersInfrastructure(configuration);
-            services.AddUserDatabase(configuration);
 
             //Register Query Handlers
             services.AddScoped<IQueryHandler<GetRolesByUserIdQuery, IEnumerable<GetRoleDto>>, GetRolesByUserIdQueryHandler>();
@@ -25,9 +25,14 @@
             //Register Services
             services.AddScoped<ILoginService, LoginService>();
 
+            // Register Event Consumers (for Outbox pattern processing)
+            services.AddScoped<UserCreatedEventConsumer>();
+
             // Register validators
             services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
 
+            //Register Domain Event Handlers (for in-memory event processing)
+            services.AddScoped<IDomainEventHandler<UserCreatedDomainEvent>, UserCreatedDomainEventHandler>();
 
             return services;
 

@@ -5,8 +5,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Framework.Web.Infrastructure\Framework.Infrastructure.Web.csproj" />
     <ProjectReference Include="..\Accounts.Domain\Accounts.Domain.csproj" />
     <ProjectReference Include="..\Accounts.Application\Accounts.Application.csproj" />
+    <ProjectReference Include="..\Accounts.Persistence\Accounts.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

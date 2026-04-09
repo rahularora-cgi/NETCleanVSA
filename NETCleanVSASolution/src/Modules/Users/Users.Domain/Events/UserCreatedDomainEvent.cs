@@ -1,10 +1,12 @@
-﻿namespace Users.Domain.Events
+﻿using Users.Domain.Entities;
+
+namespace Users.Domain.Events
 {
     public record UserCreatedDomainEvent : DomainEventBase
     {
-        int userId;
-        string UserName;
-        string Email;
+        public UserCreatedDomainEvent(User user) => User = user;
+
+        public User User { get; }
     }
 
 }

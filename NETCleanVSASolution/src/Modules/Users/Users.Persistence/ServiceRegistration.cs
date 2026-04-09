@@ -1,13 +1,15 @@
 ﻿namespace Users.Persistence
 {
-    public static class ServiceRegistration
+    public static class ServiceRegistrationUsersPersistenceExtensions
     {
-        public static IServiceCollection AddUserDatabase(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddUsersDatabase(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<UsersDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString(UsersDbSettings.ConnectionStringKey));
             });
+
+            services.AddScoped<IUsersDbContext>(sp => sp.GetRequiredService<UsersDbContext>());
 
             return services;
         }

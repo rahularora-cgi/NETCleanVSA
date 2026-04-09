@@ -1,6 +1,8 @@
-﻿namespace Users.Application.QueryUser
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.QueryUser
 {
-    public class GetUserByEmailQueryHandler(UsersDbContext _dbContext, ILogger<GetUserByEmailQueryHandler> _logger) : IQueryHandler<GetUserByEmailQuery, GetUserDto>
+    public class GetUserByEmailQueryHandler(IUsersDbContext _dbContext, ILogger<GetUserByEmailQueryHandler> _logger) : IQueryHandler<GetUserByEmailQuery, GetUserDto>
     {
         public async Task<Result<GetUserDto>> HandleAsync(GetUserByEmailQuery query, CancellationToken cancellationToken)
         {

@@ -45,4 +45,8 @@
     <Project Path="src/Orchestration/NETCleanVSA.ServiceDefaults/NETCleanVSA.ServiceDefaults.csproj" />
   </Folder>
   <Folder Name="/tests/" />
+  <Folder Name="/tests/Modules/" />
+  <Folder Name="/tests/Modules/Users/">
+    <Project Path="tests/Modules/Users/Users.Application.UnitTests/Users.Application.UnitTests.csproj" />
+  </Folder>
 </Solution>

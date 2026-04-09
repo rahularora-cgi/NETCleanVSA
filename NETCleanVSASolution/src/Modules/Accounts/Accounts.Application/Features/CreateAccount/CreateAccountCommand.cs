@@ -1,4 +1,6 @@
-﻿namespace Accounts.Application.Features.CreateAccount
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Accounts.Application.Features.CreateAccount
 {
     //public record CreateAccountCommand(string accountName, string desc): ICommand;
 

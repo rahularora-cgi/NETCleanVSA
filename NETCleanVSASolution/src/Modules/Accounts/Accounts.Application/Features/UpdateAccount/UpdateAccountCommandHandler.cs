@@ -1,6 +1,8 @@
+using Framework.Application.Abstractions.CQRS;
+
 namespace Accounts.Application.Features.UpdateAccount
 {
-    public class UpdateAccountCommandHandler(AccountsDbContext _dbContext, ILogger<UpdateAccountCommandHandler> _logger)
+    public class UpdateAccountCommandHandler(IAccountsDbContext _dbContext, ILogger<UpdateAccountCommandHandler> _logger)
         : ICommandHandler<UpdateAccountCommand, Unit>
     {
         public async Task<Result<Unit>> HandleAsync(UpdateAccountCommand command, CancellationToken cancellationToken = default)

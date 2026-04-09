@@ -2,9 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Users.Presentation;
-using Accounts.Presentation;
 using Framework.Infrastructure.Web;
+using Framework.Infrastructure.Notifications;
+using Users.Endpoint;
+using Accounts.Endpoint;
 
 namespace CRM.Web.Api
 {
@@ -12,12 +13,14 @@ namespace CRM.Web.Api
     {
         public static IServiceCollection AddCRMApiServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddNotificationServices(configuration);
+
             //Register Framework Infrastructure
             services.AddFrameworkWebInfrastructure(configuration);
 
             //Register Account Application Services
-            services.AddUsersPresentation(configuration);
-            services.AddAccountsPresentation(configuration);
+            services.AddUsersEndpoint(configuration);
+            services.AddAccountsEndpoint(configuration);
             return services;
         }
     }

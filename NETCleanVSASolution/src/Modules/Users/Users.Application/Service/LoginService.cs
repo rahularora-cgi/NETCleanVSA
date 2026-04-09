@@ -1,4 +1,6 @@
-﻿namespace Users.Application.Service
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.Service
 {
     public class LoginService(IQueryDispatcher _queryDispatcher, IJwtTokenProvider _jwtTokenProvider) : ILoginService
     {

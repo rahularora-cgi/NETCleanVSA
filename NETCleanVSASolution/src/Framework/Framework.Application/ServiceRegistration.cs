@@ -1,12 +1,13 @@
-﻿namespace Framework.Application
+﻿using Framework.Application.Abstractions.CQRS;
+using Framework.Application.Abstractions.Events;
+
+namespace Framework.Application
 {
     public static class ServiceRegistration
     {
-        public static void AddFrameworkApplication(this IServiceCollection services)
+        public static IServiceCollection AddFrameworkApplication(this IServiceCollection services)
         {
-            //Register Dispathers
-            services.TryAddScoped<ICommandDispatcher, CommandDispatcher>();
-            services.TryAddScoped<IQueryDispatcher, QueryDispatcher>();
+            return services;
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace Users.Application.QueryRole
+﻿using Framework.Application.Abstractions.CQRS;
+
+namespace Users.Application.QueryRole
 {
-    public class GetRolesByUserIdQueryHandler(UsersDbContext _dbContext, ILogger<GetRolesByUserIdQueryHandler> _logger)
+    public class GetRolesByUserIdQueryHandler(IUsersDbContext _dbContext, ILogger<GetRolesByUserIdQueryHandler> _logger)
         : IQueryHandler<GetRolesByUserIdQuery, IEnumerable<GetRoleDto>>
     {
         public async Task<Result<IEnumerable<GetRoleDto>>> HandleAsync(GetRolesByUserIdQuery query, CancellationToken cancellationToken)
