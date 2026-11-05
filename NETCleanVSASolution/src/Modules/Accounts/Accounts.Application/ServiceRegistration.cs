@@ -20,7 +20,7 @@ namespace Accounts.Application
             //Register Validators
             //services.AddScoped<IValidator<CreateAccountCommand>, CreateAccountValidator>();
 
-            services.AddValidatorsFromAssembly(typeof(ServiceRegistrationAccountsApplicationExtensions).Assembly);
+            services.AddValidatorsFromAssembly(typeof(AccountsApplicationExtensions).Assembly);
 
             //To use the Decorator Pattern for logging, we need to register the concrete handler first, then the decorator
 
