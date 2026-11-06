@@ -3,12 +3,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace Accounts.Application
 {
-    public static class ServiceRegistrationAccountsApplicationExtensions
+    public static class AccountsApplicationExtensions
     {
         public static IServiceCollection AddAccountsApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            //Register Framework Application Services
-            services.AddFrameworkApplication();
 
             //Register Command Handlers
             services.AddScoped<ICommandHandler<CreateAccountCommand, int>, CreateAccountCommandHandler>();
@@ -22,7 +20,7 @@ namespace Accounts.Application
             //Register Validators
             //services.AddScoped<IValidator<CreateAccountCommand>, CreateAccountValidator>();
 
-            services.AddValidatorsFromAssembly(typeof(ServiceRegistrationAccountsApplicationExtensions).Assembly);
+            services.AddValidatorsFromAssembly(typeof(AccountsApplicationExtensions).Assembly);
 
             //To use the Decorator Pattern for logging, we need to register the concrete handler first, then the decorator
 

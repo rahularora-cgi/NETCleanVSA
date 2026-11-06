@@ -2,7 +2,7 @@
 
 namespace Accounts.Persistence
 {
-    public static class ServiceRegistrationAccountsPersistenceExtensions
+    public static class AccountsPersistenceExtensions
     {
         public static IServiceCollection AddAccountsDatabase(this IServiceCollection services, IConfiguration configuration)
         {

@@ -1,6 +1,8 @@
-﻿namespace Users.Infrastructure
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Users.Infrastructure
 {
-    public static class ServiceRegistration
+    public static class UsersUsersInfrastructureExtensions
     {
         public static IServiceCollection AddUsersInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {

@@ -3,12 +3,10 @@ using Framework.Application.Abstractions.Events;
 
 namespace Users.Application
 {
-    public static class ServiceRegistrationUsersApplicationExtensions
+    public static class UsersApplicationExtensions
     {
         public static IServiceCollection AddUsersApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            //Register Framework Application Services
-            services.AddFrameworkApplication();
 
             //Register Query Handlers
             services.AddScoped<IQueryHandler<GetRolesByUserIdQuery, IEnumerable<GetRoleDto>>, GetRolesByUserIdQueryHandler>();
